@@ -37,12 +37,12 @@ jobs:
             echo "::set-output name=CACHE_KEY_LINT::${{ hashFiles('.github/workflows/lint/Dockerfile.ubuntu-1604') }}"
             echo "::set-output name=UBUNTU_VERSION::ubuntu-1604"
           fi
-          if [[ "${{github.base_ref}}" == "ubuntu-20.04-upgrade" || "${{github.ref}}" == "refs/heads/ubuntu-20.04-upgrade" || "${{github.base_ref}}" == "ci-cd-ubuntu-20.04" || "${{github.ref}}" == "ci-cd-ubuntu-20.04" ]]; then
+          if [[ "${{github.base_ref}}" == "ubuntu-20.04-upgrade" || "${{github.ref}}" == "refs/heads/ubuntu-20.04-upgrade" || "${{github.base_ref}}" == "ci-cd-ubuntu-20.04" || "${{github.ref}}" == "refs/heads/ci-cd-ubuntu-20.04" ]]; then
             echo "::set-output name=CACHE_KEY_BUILD::${{ hashFiles('.github/workflows/build/Dockerfile.ubuntu-2004') }}"
             echo "::set-output name=CACHE_KEY_LINT::${{ hashFiles('.github/workflows/lint/Dockerfile.ubuntu-2004') }}"
             echo "::set-output name=UBUNTU_VERSION::ubuntu-2004"
           fi
-          
+     
 
           if [[ "${{github.base_ref}}" == 'master' || "${{github.ref}}" == 'refs/heads/master' || "${{github.base_ref}}" == 'main' || "${{github.ref}}" == 'refs/heads/main' ]]; then
             echo "::set-output name=GITHUB_REF::main"
