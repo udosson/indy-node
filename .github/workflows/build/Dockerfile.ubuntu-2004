@@ -12,7 +12,13 @@ RUN apt-get update -y && apt-get install -y \
     apt-utils \
     # Python
     python3-pip \
+    python3-venv \
     python3-nacl \
+    # Testing
+    ibsodium23 \ 
+    iptables \ 
+    at \ 
+    supervisor \ 
     # rocksdb python wrapper
     librocksdb5.17 \
     librocksdb-dev \
