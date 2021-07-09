@@ -15,7 +15,7 @@ RUN apt-get update -y && apt-get install -y \
     python3-venv \
     python3-nacl \
     # Testing
-    ibsodium23 \ 
+    libsodium23 \ 
     iptables \ 
     at \ 
     supervisor \ 
